@@ -217,9 +217,9 @@ set showcmd
 set statusline=%<%f%h%m%r%=format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&encoding}\ %b\ 0x%B\ %l,%c%V\ %P
 
 " C-e - комментировать/раскомментировать (при помощи NERD_Comment)
-map <C-e> ,ci
-nmap <C-e> ,ci
-imap <C-e> <ESC>,cii
+"map <C-e> ,ci
+"nmap <C-e> ,ci
+"imap <C-e> <ESC>,cii
 
 " Вырезать-копировать-вставить через Ctrl
 
@@ -601,3 +601,4 @@ if has("unix")
 endif
 ":set clipboard=unnamed,exclude:cons\\\|linux
 
+let g:user_emmet_leader_key='<C-e>'
