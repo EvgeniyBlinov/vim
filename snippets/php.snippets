@@ -41,13 +41,13 @@ snippet /*
 	 * ${1}
 	 **/
 # Class - post doc
-snippet doc_cp
+snippet doc_class
 	/**
-	 * ${1:undocumented class}
+	 * ${1:filename}
 	 *
 	 * @package ${2:default}
-	 * @author ${3:`g:snips_author`}
-	**/${4}
+	 * @author Evgeniy Blinov <evgeniy_blinov@mail.ru>
+	**/
 # Class Variable - post doc
 snippet doc_vp
 	/**
@@ -58,11 +58,8 @@ snippet doc_vp
 # Class Variable
 snippet doc_v
 	/**
-	 * ${3:undocumented class variable}
-	 *
 	 * @var ${4:string}
 	 **/
-	${1:var} $${2};${5}
 # Class
 snippet doc_c
 	/**
