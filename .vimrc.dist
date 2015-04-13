@@ -1,5 +1,6 @@
 let $MYVIMRC = "~/.vimrc"
 
+let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
 " Автоматически перечитывать конфигурацию VIM после сохранения
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
