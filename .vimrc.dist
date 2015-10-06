@@ -1,3 +1,4 @@
+" Путь к конфигу
 let $MYVIMRC = "~/.vimrc"
 
 let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
@@ -95,19 +96,6 @@ set foldenable 			" Фолдинг сворачивание кода
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
-filetype on
-filetype plugin indent on " определять подсветку на основе кода файла
-augroup filetype
-	autocmd BufNewFile,BufRead <Directory Path>/*.html set filetype=php
-augroup END
-
 "if &term=="xterm"
 	 "set t_Co=8
 	 "set t_Sb=[4%dm
@@ -125,6 +113,24 @@ if &term =~ "xterm"
 	" Подсветка спец символов
 	autocmd VimEnter,Colorscheme * :hi SpecialKey ctermfg=8
 endif
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+" Syntax highlighting enables.
+"if has("syntax")
+""syntax on
+"endif
+
+filetype on
+filetype plugin indent on " определять подсветку на основе кода файла
+augroup filetype
+	autocmd BufNewFile,BufRead <Directory Path>/*.html set filetype=php
+augroup END
 
 set ignorecase				" Игнорирование регистра при поиске
 
@@ -531,6 +537,8 @@ let php_baselib = 1
 "noremap <f12> :silent !ctags -R --languages=php .<cr>:FufRenewCache<cr>
 
 "set noautochdir
+""""""""""""""""""""""""""""""   NERDTree
+let NERDTreeIgnore=['\.pyc$']
 "let NERDTreeChDirMode=2
 "let NERDTreeDirArrows=1
 "map  <F3> :NERDTreeToggle<CR>
