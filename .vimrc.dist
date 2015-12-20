@@ -28,6 +28,9 @@ set undolevels=2048				" ... и правок
 " set undodir=~/.vim/undo/
 set ttyfast " ускорение открытия файлов
 
+set nobackup			" Запретить создание бэкапов
+set noswapfile			" Запретить создание swap файлов
+
 set ruler						" Всегда показывать положение курсора
 set nu
 
@@ -174,9 +177,6 @@ set nosmartindent
 
 " Заставляем BackSpace работать как x, т.е. удалять предыдущий символ
 set backspace=indent,eol,start whichwrap+=<,>,[,]
-
-set nobackup			" Запретить создание бэкапов
-set noswapfile			" Запретить создание swap файлов
 
 function! MyKeyMapHighlight()
    if &iminsert == 0 " при английской раскладке статусная строка текущего окна будет серого цвета
