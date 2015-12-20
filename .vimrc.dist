@@ -532,6 +532,13 @@ let NERDTreeIgnore=['\.pyc$']
 
 nnoremap <silent> <C-f> :<C-u>if exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) == winnr() <Bar> wincmd p <Bar> endif <Bar> FufTag<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ==================   dragvisulas.vim ==========================
+vmap  <expr>  <S-LEFT>   DVB_Drag('left')
+vmap  <expr>  <S-RIGHT>  DVB_Drag('right')
+vmap  <expr>  <S-DOWN>   DVB_Drag('down')
+vmap  <expr>  <S-UP>     DVB_Drag('up')
+" ==================   dragvisulas.vim ==========================
+
 map <C-c> :call system('xclip -selection c -i', @")
 vmap <C-c> :call system('xclip -selection c -i', @")
 imap <C-c> :call system('xclip -selection c -i', @")
