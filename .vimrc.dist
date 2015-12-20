@@ -122,6 +122,16 @@ set ignorecase				" Игнорирование регистра при поис�
 set incsearch               " Перескакивать на найденные слова
 
 
+" Установка английских диалогов
+if has('unix')
+    language messages C
+else
+    language messages en
+endif
+" Не работает правильно!
+"let $LANG = 'en'
+"set langmenu=en_US.UTF-8
+
 " Языковые установ" Языковые
 set keymap=russian-jcukenwin
 "set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
