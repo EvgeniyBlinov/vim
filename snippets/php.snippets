@@ -232,3 +232,5 @@ snippet ok
 	echo "ok";die;
 snippet no
 	echo "no";die;
+snippet namespace
+	namespace `substitute(expand("%:p:h"), '\/', '\\\', "g")`;

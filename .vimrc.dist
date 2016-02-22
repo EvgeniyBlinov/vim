@@ -581,6 +581,12 @@ imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'
  endif
 :set clipboard=unnamed,exclude:cons\\\|linux
 
+" Change selected text from NameLikeThis to name_like_this.
+"vnoremap ,u :%s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#gul
+
+" Change selected text from name_like_this to NameLikeThis.
+"vnoremap ,U :s/_\([a-z]\)/\u\1/g<CR>gUl
+
 " Вырезать-копировать-вставить через Ctrl
 " CTRL-V вставить под курсором
 " map <C-V> +gP
