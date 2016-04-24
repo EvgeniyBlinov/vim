@@ -112,6 +112,11 @@ endif
 ""syntax on
 "endif
 
+
+" old regex engine for fast filetype parsing
+set re=1
+
+
 filetype on
 filetype plugin indent on " определять подсветку на основе кода файла
 augroup filetype
