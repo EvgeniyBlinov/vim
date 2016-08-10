@@ -177,6 +177,16 @@ set mousehide
 " ======= МЫШЬ=======
 
 
+" tabs
+"set noet ci pi sts=0 sw=4 ts=4
+""""""""""" equal
+"set noexpandtab
+"set copyindent
+"set preserveindent
+"set softtabstop=0
+"set shiftwidth=4
+"set tabstop=4
+
 " Настройки табуляции табуляция равна 4 пробелам
 set tabstop=4
 " Двигать блоки в визуальном режиме на 4 пробела с помощью клавиш < и >
@@ -514,6 +524,12 @@ let php_baselib = 1
 " 	map <F4> :TlistToggle<CR>
 " 	imap <F4> <Esc>:TlistToggle<CR>
 " 	vmap <F4> <Esc>:TlistToggle<CR>
+
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+
+let g:vdebug_options["break_on_open"]=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "============CSS block================
