@@ -278,6 +278,9 @@ inoremap <c-y> <C-O><C-R>
 " будет «глючить» — отсупы будут «съезжать». К счастью, это легко исправить — нажав Ctrl+U сразу после вставки.
 inoremap <silent> <C-u> <ESC>u:set paste<CR>.:set nopaste<CR>gi
 
+" убрать подсветку найденных совпадений
+nnoremap <C-h> :noh<CR>
+
 " ====================  TABS  ============================================
 " {{{ Вкладки
 " Новая вкладка
@@ -332,6 +335,17 @@ else
 	map <c-right> <c-w><right>
 	imap <c-right> <esc><c-w><c-right>
 endif
+
+" передвинуть текущую вкладку вправо
+nnoremap tm :tabm +10<CR>
+
+" передвинуть текущую вкладку влево
+nnoremap tM :tabm -10<CR>
+
+" увеличить окно
+nnoremap wm :vertical resize +80% <CR>
+" уменьшить окно
+nnoremap wM :vertical resize -80% <CR>
 " ====================  TABS  ============================================
 
 " Автодополнение слова
@@ -453,6 +467,12 @@ endif
 ""map <F12> :emenu Encoding.<Tab>
 "" блок меню
 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+"-------------------------
+" ctags
+"-------------------------
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 "-------------------------
 " PHP настройки
@@ -672,6 +692,7 @@ endfunction
 "vmap <F10> <Esc>:q<CR>
 
 "" Просмотр списка буферов по <F4>
+nnoremap gb :ls<CR>:b<Space>
 "nmap <F4> <Esc>:buffers<CR>
 "vmap <F4> <Esc>:buffers<CR>
 "imap <F4> <Esc><Esc>:buffers<CR>
