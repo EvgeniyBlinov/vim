@@ -55,6 +55,9 @@ if has("autocmd")
   augroup END
 endif
 
+"Vim Modelines Shell Command Injection Vulnerability disable
+set modelines=0
+
 """"""""""""""""""""""""""""""""    FILE   """"""""""""""""""""""""""""""""""""
 " Кодировка по умолчанию
 set encoding=utf-8
