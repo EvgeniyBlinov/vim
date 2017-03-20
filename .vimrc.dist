@@ -169,7 +169,16 @@ set statusline=%<%f%h%m%r%=format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&
 " Изменить цвет курсора в консоли при изменении режима ввода
 
 " Включение поддержки мыши
-set mouse=a
+set mouse+=a
+"if &term =~ '^screen'
+    "" tmux knows the extended mouse mode
+    "set ttymouse=xterm2
+"endif
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 set mousemodel=popup
 
 " Прятать курсор при наборе текста
