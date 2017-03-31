@@ -85,9 +85,10 @@ snippet doc_fnc
 	/**
 	 * ${1:undocumented function}
 	 *
+	 * @param string ${4}
 	 * @return ${2:void}
 	 * @author ${3:`g:snips_author`}
-	 **/${4}
+	 **/
 # Function signature
 snippet doc_s
 	/**
@@ -97,6 +98,19 @@ snippet doc_s
 	 * @author ${6:`g:snips_author`}
 	 **/
 	${1}function ${2}(${3});${7}
+# Function signature
+snippet dfnc
+	/**
+	 * ${1:undocumented function}
+	 *
+	 * @param string ${6}
+	 * @return ${2:void}
+	 * @author ${3:`g:snips_author`}
+	 **/${4}
+	${4:public} function ${5:FunctionName}(${6})
+	{
+		${7:// code...}
+	}
 # Function
 snippet doc_f
 	/**
@@ -212,22 +226,24 @@ snippet fch
 		${3:// code...}
 	}
 snippet pfnc
-	${1:public }function ${2:FunctionName}(${3})
+	${1:public} function ${2:FunctionName}(${3})
 	{
 		${4:// code...}
 	}
 snippet psfnc
-	${1:public } static function ${2:FunctionName}(${3})
+	${1:public} static function ${2:FunctionName}(${3})
 	{
 		${4:// code...}
 	}
 # $... = array (...)
 snippet array
-	$${1:arrayName} = array('${2}' => ${3});${4}
+	$${1:arrayName} = ['${2}' => ${3}];${4}
 snippet fnc
-	function ${1}(${2}){ ${3} }
+	function ${1}(${2}){${3}}
 snippet vdump
 	echo "<pre>";var_dump(${1});die;
+snippet vexport
+	echo "<pre>";var_export(${1});die;
 snippet ok
 	echo "ok";die;
 snippet no
