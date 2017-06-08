@@ -202,14 +202,14 @@ set mousehide
 "set tabstop=4
 
 " Настройки табуляции табуляция равна 4 пробелам
-set tabstop=4
+"set tabstop=4
 " Двигать блоки в визуальном режиме на 4 пробела с помощью клавиш < и >
-set shiftwidth=4
-set softtabstop=4
+"set shiftwidth=4
+"set softtabstop=4
 set smarttab
 set shiftround
 " set noexpandtab | retab! "конверт пробелов в табы
-set expandtab ts=4 sw=4 ai
+set expandtab ts=4 sw=4 st=4 ai
 " Автоотступы для новых строк
 set autoindent
 set nosmartindent
