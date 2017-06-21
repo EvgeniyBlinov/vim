@@ -69,35 +69,35 @@ if !exists("g:vdebug_leader_key")
 endif
 
 let g:vdebug_keymap_defaults = {
-\    "run" : "<F5>",
-\    "run_to_cursor" : "<F9>",
-\    "step_over" : "<F2>",
-\    "step_into" : "<F3>",
-\    "step_out" : "<F4>",
-\    "close" : "<F6>",
-\    "detach" : "<F7>",
-\    "set_breakpoint" : "<F10>",
-\    "get_context" : "<F11>",
+\    "run"               : "<F5>",
+\    "run_to_cursor"     : "<F9>",
+\    "step_over"         : "<F2>",
+\    "step_into"         : "<F3>",
+\    "step_out"          : "<F4>",
+\    "close"             : "<F6>",
+\    "detach"            : "<F7>",
+\    "set_breakpoint"    : "<F10>",
+\    "get_context"       : "<F11>",
 \    "eval_under_cursor" : "<F12>",
-\    "eval_visual" : "<Leader>e"
+\    "eval_visual"       : "<Leader>e"
 \}
 
 let g:vdebug_options_defaults = {
-\    "port" : 9000,
-\    "timeout" : 20,
-\    "server" : 'localhost',
-\    "on_close" : 'detach',
-\    "break_on_open" : 1,
-\    "ide_key" : '',
+\    "port"               : 9000,
+\    "timeout"            : 20,
+\    "server"             : 'localhost',
+\    "on_close"           : 'detach',
+\    "break_on_open"      : 1,
+\    "ide_key"            : '',
 \    "debug_window_level" : 0,
-\    "debug_file_level" : 0,
-\    "debug_file" : "",
-\    "path_maps" : {},
+\    "debug_file_level"   : 0,
+\    "debug_file"         : "",
+\    "path_maps"          : {},
 \    "watch_window_style" : 'expanded',
-\    "marker_default" : '⬦',
+\    "marker_default"     : '⬦',
 \    "marker_closed_tree" : '▸',
-\    "marker_open_tree" : '▾',
-\    "continuous_mode"  : 0
+\    "marker_open_tree"   : '▾',
+\    "continuous_mode"    : 0
 \}
 
 " Different symbols for non unicode Vims
