@@ -486,7 +486,7 @@ endif
 " ctags
 "-------------------------
 "map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <C-\> :vsp <CR>:exec("tjump ".expand("<cword>"))<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 "-------------------------
 " PHP настройки
@@ -563,7 +563,15 @@ if !exists('g:vdebug_options')
     let g:vdebug_options = {}
 endif
 
-let g:vdebug_options["break_on_open"]=0
+"" @TODO blinov 2017-06-29: for docker vdebug
+"let g:vdebug_options["break_on_open"] = 0
+""let g:vdebug_options["server"]='10.5.0.3'
+""let g:vdebug_options["server"]='127.0.0.1'
+""let g:vdebug_options["server"]='10.5.0.1'
+""let g:vdebug_options["server"] = ''
+"let g:vdebug_options["server"] = '172.19.0.1'
+"let g:vdebug_options["debug_file"] = '~/vdebug.log'
+"let g:vdebug_options["debug_file_level"] = 2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "============CSS block================
