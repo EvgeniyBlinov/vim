@@ -638,6 +638,7 @@ imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'
      "else
       " !!! Только это работает
        vmap <C-c> y: call system("xclip -i -selection primary", getreg("\""))<CR>
+       vmap <C-p> y: call system("dpaste", getreg("\""))<CR>
        "map <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
      "endif
    endif
