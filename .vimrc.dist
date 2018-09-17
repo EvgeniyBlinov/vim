@@ -590,9 +590,10 @@ vmap <leader>z <c-y><leader>
 "============END CSS block================
 """"""""""""""""""""""""""""""   NERDTree
 let NERDTreeIgnore=['\.pyc$']
+let NERDTreeShowHidden=1
 "let NERDTreeChDirMode=2
 "let NERDTreeDirArrows=1
-"map  <F3> :NERDTreeToggle<CR>
+map  <F3> :NERDTreeFind<CR>
 
 "if has("gui_running")
 	"set cursorline							" Подсвечивать текущую строку в GUI режиме
