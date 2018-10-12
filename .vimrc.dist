@@ -729,4 +729,7 @@ nnoremap gb :ls<CR>:b<Space>
 "vmap <F6> <Esc>:bn<CR>i
 "imap <F6> <Esc>:bn<CR>i
 
+"" Перейти в файл под курсором
+:map <F8> :vertical wincmd F<CR>
+
 "set noautochdir
