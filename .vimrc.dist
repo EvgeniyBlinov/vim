@@ -1,3 +1,5 @@
+" vim: set noet ci pi sts=0 sw=4 ts=4 :
+"
 " Путь к конфигу
 let $MYVIMRC = "~/.vimrc"
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
@@ -79,6 +81,7 @@ set modelines=0
 " set background=dark		" Использование цветов для темного фона
 set background=light
 set foldenable 			" Фолдинг сворачивание кода
+set foldmethod=manual
 "set foldmethod=indent
 "set foldmethod=marker
 "set foldmarker={,}
@@ -126,6 +129,7 @@ filetype on
 filetype plugin indent on " определять подсветку на основе кода файла
 augroup filetype
 	autocmd BufNewFile,BufRead <Directory Path>/*.html set filetype=php
+	autocmd BufRead,BufNewFile *.vue set filetype=html
 augroup END
 
 set ignorecase				" Игнорирование регистра при поиске
@@ -509,7 +513,7 @@ let g:pdv_cfg_Uses = 1
 
 "" Включаем фолдинг для блоков классов/функций
 "" !!! ОЧЕНЬ СИЛЬНО ТОРМОЗИТ НА БОЛЬШИХ ФАЙЛАХ
-"let php_folding = 1
+let php_folding = 1
 "" 	map <F5> <Esc>:EnableFastPHPFolds<Cr> 
 "" 	map <F6> <Esc>:EnablePHPFolds<Cr> 
 "" 	map <F7> <Esc>:DisablePHPFolds<Cr> 
