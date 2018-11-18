@@ -11,11 +11,17 @@ PACK_ENV ?= common
 PACK_ACTION ?= start
 PACK_PATH ?= pack/$(PACK_ENV)/$(PACK_ACTION)
 
+all: plugins
+
 $(PACK_PATH):
 	mkdir -p $@
 
 .PHONY: _plugin-common
 _plugin-common: $(PACK_PATH)
+
+.PHONY: plugins
+plugins:
+	git submodule update --init
 
 .PHONY: plugin-add
 plugin-add: \
