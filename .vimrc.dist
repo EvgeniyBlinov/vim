@@ -79,7 +79,7 @@ set modelines=0
 
 
 " set background=dark		" Использование цветов для темного фона
-set background=light
+"set background=light
 set foldenable 			" Фолдинг сворачивание кода
 set foldmethod=manual
 "set foldmethod=indent
@@ -90,16 +90,21 @@ set foldmethod=manual
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-"if &term=="xterm"
-	 "set t_Co=8
-	 "set t_Sb=[4%dm
-	 "set t_Sf=[3%dm
-	 colorscheme habiLight
-"else
-	"set t_Co=256
-	"colorscheme vitamins
-"endif
-set t_Co=256
+if &term=="xterm"
+	 set t_Co=8
+	 set t_Sb=[4%dm
+	 set t_Sf=[3%dm
+	 colorscheme happy_hacking
+elseif &term=="linux"
+	 set t_Co=8
+	 set t_Sb=[4%dm
+	 set t_Sf=[3%dm
+	 colorscheme happy_hacking
+else
+	set t_Co=256
+	colorscheme habiLight
+endif
+
 " Term
 if &term =~ "xterm"
 	set t_Co=256			" set 256 colors

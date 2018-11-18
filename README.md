@@ -35,3 +35,9 @@ git commit
 ```sh
 :packadd packagename
 ```
+
+### Install plugin 
+
+```sh
+env PACK_ENV=common PACK_ACTION=opt make plugin-add ARGS=https://github.com/dracula/dracula-theme
+```

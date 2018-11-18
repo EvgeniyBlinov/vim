@@ -24,3 +24,9 @@
 [submodule "pack/php/opt/vdebug"]
 	path = pack/php/opt/vdebug
 	url = https://github.com/vim-vdebug/vdebug
+[submodule "pack/common/opt/dracula-theme"]
+	path = pack/common/opt/dracula-theme
+	url = https://github.com/dracula/dracula-theme
+[submodule "pack/common/opt/dracula"]
+	path = pack/common/opt/dracula
+	url = https://github.com/dracula/vim
