@@ -21,3 +21,6 @@
 [submodule "pack/php/start/php.vim"]
 	path = pack/php/start/php.vim
 	url = https://github.com/stanangeloff/php.vim.git
+[submodule "pack/php/opt/vdebug"]
+	path = pack/php/opt/vdebug
+	url = https://github.com/vim-vdebug/vdebug
