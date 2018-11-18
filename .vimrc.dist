@@ -753,6 +753,6 @@ if exists('g:Ulti')
 	let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 endif
 " ===========  supertab  =================
-let g:SuperTabNoCompleteAfter = ['^', '\s']
-let g:SuperTabCrMapping = 0
+"let g:SuperTabNoCompleteAfter = ['^', '\s']
+"let g:SuperTabCrMapping = 0
 
