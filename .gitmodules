@@ -4,3 +4,9 @@
 [submodule "pack/my/start/vim-kubernetes"]
 	path = pack/my/start/vim-kubernetes
 	url = https://github.com/andrewstuart/vim-kubernetes.git
+[submodule "pack/my/start/ultisnips"]
+	path = pack/my/start/ultisnips
+	url = https://github.com/sirver/ultisnips.git
+[submodule "pack/my/start/supertab"]
+	path = pack/my/start/supertab
+	url = https://github.com/ervandew/supertab.git

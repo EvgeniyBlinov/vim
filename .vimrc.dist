@@ -737,3 +737,9 @@ nnoremap gb :ls<CR>:b<Space>
 :map <F8> :vertical wincmd F<CR>
 
 "set noautochdir
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
