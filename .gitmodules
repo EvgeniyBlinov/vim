@@ -10,3 +10,9 @@
 [submodule "pack/my/start/supertab"]
 	path = pack/my/start/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "pack/my/start/php-documentor-vim"]
+	path = pack/my/start/php-documentor-vim
+	url = https://github.com/sumpygump/php-documentor-vim.git
+[submodule "pack/my/start/php.vim"]
+	path = pack/my/start/php.vim
+	url = https://github.com/stanangeloff/php.vim.git

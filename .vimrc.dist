@@ -506,7 +506,15 @@ set makeprg=php\ -l\ %
 " Формат вывода ошибок PHP
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
+"----------------  php-doc  ----------------------------
 let g:pdv_cfg_Uses = 1
+let g:pdv_cfg_Author = (exists("g:pdv_cfg_Author")) ? g:pdv_cfg_Author : g:snips_author
+
+
+au BufRead,BufNewFile *.php inoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php nnoremap <buffer> <C-P> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
+"----------------  php-doc  ----------------------------
 
 " Vim постовляется с достаточно мощным плугином подстветки синтаксиса PHP.
 " Помимо прочего он умеет:
