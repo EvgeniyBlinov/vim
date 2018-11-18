@@ -30,5 +30,4 @@ plugin-add: \
 
 .PHONY: plugin-upgrade-all
 plugin-upgrade-all:
-	git submodule update --remote --merge
-	git commit
+	git submodule update --init --remote --merge
