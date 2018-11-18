@@ -16,3 +16,6 @@
 [submodule "pack/my/start/php.vim"]
 	path = pack/my/start/php.vim
 	url = https://github.com/stanangeloff/php.vim.git
+[submodule "pack/my/start/vim-snippets"]
+	path = pack/my/start/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
