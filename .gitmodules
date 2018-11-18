@@ -1,21 +1,23 @@
-[submodule "pack/my/start/ansible-vim"]
-	path = pack/my/start/ansible-vim
-	url = https://github.com/pearofducks/ansible-vim
-[submodule "pack/my/start/vim-kubernetes"]
-	path = pack/my/start/vim-kubernetes
-	url = https://github.com/andrewstuart/vim-kubernetes.git
-[submodule "pack/my/start/ultisnips"]
-	path = pack/my/start/ultisnips
-	url = https://github.com/sirver/ultisnips.git
-[submodule "pack/my/start/supertab"]
-	path = pack/my/start/supertab
+[submodule "pack/common/start/supertab"]
+	path = pack/common/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "pack/my/start/php-documentor-vim"]
-	path = pack/my/start/php-documentor-vim
-	url = https://github.com/sumpygump/php-documentor-vim.git
-[submodule "pack/my/start/php.vim"]
-	path = pack/my/start/php.vim
-	url = https://github.com/stanangeloff/php.vim.git
-[submodule "pack/my/start/vim-snippets"]
-	path = pack/my/start/vim-snippets
+[submodule "pack/common/start/ultisnips"]
+	path = pack/common/start/ultisnips
+	url = https://github.com/sirver/ultisnips.git
+[submodule "pack/common/start/vim-snippets"]
+	path = pack/common/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+
+[submodule "pack/devops/start/ansible-vim"]
+	path = pack/devops/start/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
+[submodule "pack/devops/start/vim-kubernetes"]
+	path = pack/devops/start/vim-kubernetes
+	url = https://github.com/andrewstuart/vim-kubernetes.git
+
+[submodule "pack/php/start/php-documentor-vim"]
+	path = pack/php/start/php-documentor-vim
+	url = https://github.com/sumpygump/php-documentor-vim.git
+[submodule "pack/php/start/php.vim"]
+	path = pack/php/start/php.vim
+	url = https://github.com/stanangeloff/php.vim.git

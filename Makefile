@@ -7,12 +7,20 @@ CURRENT_DIR := $(shell dirname "$(realpath "$(lastword $(MAKEFILE_LIST))")")
 -include .env
 export
 ########################################################################
-PACK_PATH ?= pack/my/start
+ENV ?= common
+PACK_PATH ?= pack/$(ENV)/start
+
+$(PACK_PATH):
+	mkdir -p $@
+
+.PHONY: _plugin-common
+_plugin-common: $(PACK_PATH)
 
 .PHONY: plugin-add
-plugin-add:
+plugin-add: \
+		_plugin-common
 	@if [ ! -d "$(PACK_PATH)/$(notdir ${ARGS})" ]; then \
-		git submodule add \
+		echo git submodule add \
 			${ARGS} \
 			$(PACK_PATH)/$(notdir ${ARGS}) ;\
 	else \

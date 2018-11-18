@@ -754,3 +754,5 @@ if exists('g:Ulti')
 endif
 " ===========  supertab  =================
 let g:SuperTabNoCompleteAfter = ['^', '\s']
+let g:SuperTabCrMapping = 0
+
