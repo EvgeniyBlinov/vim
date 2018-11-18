@@ -746,8 +746,11 @@ nnoremap gb :ls<CR>:b<Space>
 
 "set noautochdir
 
+" ===========  ultisnips  =================
 if exists('g:Ulti')
-	let g:UltiSnipsExpandTrigger="<tab>"
+	let g:UltiSnipsExpandTrigger="<c-n>"
 	let g:UltiSnipsJumpForwardTrigger="<c-b>"
 	let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 endif
+" ===========  supertab  =================
+let g:SuperTabNoCompleteAfter = ['^', '\s']
