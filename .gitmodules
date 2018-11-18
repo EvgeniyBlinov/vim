@@ -1,3 +1,6 @@
 [submodule "pack/my/start/ansible-vim"]
 	path = pack/my/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim
+[submodule "pack/my/start/vim-kubernetes"]
+	path = pack/my/start/vim-kubernetes
+	url = https://github.com/andrewstuart/vim-kubernetes.git
