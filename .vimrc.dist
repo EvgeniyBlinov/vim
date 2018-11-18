@@ -90,6 +90,14 @@ set foldmethod=manual
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
+"@TODO
+"if &background=="dark"
+	""colorscheme happy_hacking
+	"echo "dark"
+"elseif &background=="light"
+	""colorscheme habiLight
+	"echo "light"
+"endif
 if &term=="xterm"
 	 set t_Co=8
 	 set t_Sb=[4%dm
