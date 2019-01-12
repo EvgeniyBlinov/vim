@@ -15,7 +15,7 @@ git commit
 To update packages is also just a case of updating git submodules.
 
 ```sh
-git submodule update --remote --merge
+git submodule update --init --remote --merge
 git commit
 ```
 

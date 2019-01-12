@@ -13,6 +13,9 @@ PACK_PATH ?= pack/$(PACK_ENV)/$(PACK_ACTION)
 
 all: plugins
 
+.PHONY: upgrade
+upgrade: plugin-upgrade-all
+
 $(PACK_PATH):
 	mkdir -p $@
 
