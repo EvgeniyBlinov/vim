@@ -30,3 +30,6 @@
 [submodule "pack/common/opt/dracula"]
 	path = pack/common/opt/dracula
 	url = https://github.com/dracula/vim
+[submodule "pack/devops/start/vim-hcl"]
+	path = pack/devops/start/vim-hcl
+	url = https://github.com/b4b4r07/vim-hcl.git
