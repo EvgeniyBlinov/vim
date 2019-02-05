@@ -1,8 +1,12 @@
 " vim: set noet ci pi sts=0 sw=4 ts=4 :
 "
-" Путь к конфигу
-"set runtimepath=$HOME/myvim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/vimfiles/after
-"so $HOME/myvim/vimrc
+""""""""""  Multi config """""""""""""""""""""""""""
+"env VIMDIR=myvim vim
+"cat > $HOME/.vimrc <<- 'EOF'
+"set runtimepath=$HOME/$VIMDIR,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/vimfiles/after
+"so $HOME/$VIMDIR/vimrc
+"EOF
+
 
 let $MYVIMRC = "$HOME/.vim/vimrc"
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
