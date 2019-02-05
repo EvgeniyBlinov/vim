@@ -1,7 +1,10 @@
 " vim: set noet ci pi sts=0 sw=4 ts=4 :
 "
 " Путь к конфигу
-let $MYVIMRC = "~/.vimrc"
+"set runtimepath=$HOME/myvim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/vimfiles/after
+"so $HOME/myvim/vimrc
+
+let $MYVIMRC = "$HOME/.vim/vimrc"
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
 """  FISRT OF ALL
 " Кодировка по умолчанию
