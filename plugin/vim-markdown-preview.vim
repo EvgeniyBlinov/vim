@@ -38,6 +38,7 @@ if !exists("g:vim_markdown_preview_hotkey")
 endif
 
 function! Vim_Markdown_Preview()
+    write
     let b:curr_file = expand('%:p')
 
     if g:vim_markdown_preview_github == 1
@@ -83,13 +84,6 @@ if g:vim_markdown_preview_toggle == 0
     "Maps vim_markdown_preview_hotkey to Vim_Markdown_Preview()
     :exec 'autocmd Filetype markdown,md map <buffer> ' . g:vim_markdown_preview_hotkey . ' :call Vim_Markdown_Preview()<CR>'
 elseif g:vim_markdown_preview_toggle == 1
-    "Display images - Maps vim_markdown_preview_hotkey to Vim_Markdown_Preview_Local() - saves the html file locally
-    "and displays images in path
-    :exec 'autocmd Filetype markdown,md map <buffer> ' . g:vim_markdown_preview_hotkey . ' :call Vim_Markdown_Preview_Local()<CR>'
-elseif g:vim_markdown_preview_toggle == 2
-    "Display images - Automatically call Vim_Markdown_Preview_Local() on buffer write
-    autocmd BufWritePost *.markdown,*.md :call Vim_Markdown_Preview_Local()
-elseif g:vim_markdown_preview_toggle == 3
     "Automatically call Vim_Markdown_Preview() on buffer write
     autocmd BufWritePost *.markdown,*.md :call Vim_Markdown_Preview()
 endif
