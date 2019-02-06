@@ -417,22 +417,6 @@ imap <C-@> <C-Space>
 	" autocmd BufNewFile,Bufread *.php set keywordprg="help"
 " 
 
-if has("cscope") && filereadable("/usr/bin/cscope")
-   set csprg=/usr/bin/cscope
-   set csto=0
-   set cst
-   set nocsverb
-   " add any database in current directory
-   if filereadable("cscope.out")
-	  cs add cscope.out
-   " else add database pointed to by environment
-   elseif $CSCOPE_DB != ""
-	  cs add $CSCOPE_DB
-   endif
-   set csverb
-endif
-
-
 "http://www.instanceof.ru/linux/vim/translate
 "map <F8>  :call TRANSLATE()<cr>
 "function TRANSLATE()
@@ -647,12 +631,12 @@ vmap  <expr>  <S-DOWN>   DVB_Drag('down')
 vmap  <expr>  <S-UP>     DVB_Drag('up')
 " ==================   dragvisulas.vim ==========================
 
-map <C-c> :call system('xclip -selection c -i', @")
+map  <C-c> :call system('xclip -selection c -i', @")
 vmap <C-c> :call system('xclip -selection c -i', @")
 imap <C-c> :call system('xclip -selection c -i', @")
 
 " Скопировать в буфер обмена текущее имя файла и номер строки
-map <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
+map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
 vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
 imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
 
@@ -673,7 +657,7 @@ imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'
      "else
       " !!! Только это работает
        vmap <C-c> y: call system("xclip -i -selection primary", getreg("\""))<CR>
-       vmap <C-p> y: call system("dpaste", getreg("\""))<CR>
+       "vmap <C-p> y: call system("dpaste", getreg("\""))<CR>
        "map <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
      "endif
    endif
@@ -764,7 +748,10 @@ nnoremap gb :ls<CR>:b<Space>
 "imap <F6> <Esc>:bn<CR>i
 
 "" Перейти в файл под курсором
-:map <F8> :vertical wincmd F<CR>
+nnoremap <F8> :vertical wincmd F<CR>
+nnoremap <C-x> :vertical wincmd F<CR>
+nnoremap <F9> :vnew
+
 
 "set noautochdir
 
