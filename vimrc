@@ -8,31 +8,30 @@
 "EOF
 
 
-let $MYVIMRC = "$HOME/.vim/vimrc"
+"let $MYVIMRC = "$HOME/.vim/vimrc"
+"" Автоматически перечитывать конфигурацию VIM после сохранения
+"autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
 """  FISRT OF ALL
 " Кодировка по умолчанию
 scriptencoding utf-8
 set encoding=utf-8
-if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=utf-8,latin1
-endif
+"if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+   "set fileencodings=utf-8,latin1
+"endif
+" Список кодировок файлов для авто-определения
+set fileencodings=utf-8,koi8-r,cp1251,cp866
+" Кодировка терминала
 set termencoding=utf-8
 " Формат файла по умолчанию
 set fileformat=unix
 " Формат файла, который влияет на окончания строк — будет перебирать в
 " указанном порядке
 set ffs=unix,dos,mac
-" Список кодировок файлов для авто-определения
-set fileencodings=utf-8,koi8-r,cp1251,cp866
 
-" Кодировка терминала
-set termencoding=utf-8
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
 
 let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
-" Автоматически перечитывать конфигурацию VIM после сохранения
-autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " Сочитание для Leader
 let mapleader = ","
@@ -43,7 +42,6 @@ set shortmess+=I " И нет детей Уганды
 
 
 set nocompatible				" Use Vim defaults (much better!)
-"set backup 					" keep a backup file
 set viminfo='20,\"50			" read/write a .viminfo file, don't store more
 								" than 50 lines of registers
 set history=128					" Хранить больше истории команд ...
@@ -52,6 +50,7 @@ set undolevels=2048				" ... и правок
 " set undodir=~/.vim/undo/
 set ttyfast " ускорение открытия файлов
 
+"set backup 					" keep a backup file
 set nobackup			" Запретить создание бэкапов
 set noswapfile			" Запретить создание swap файлов
 
@@ -329,21 +328,21 @@ nmap ,t :tabnew<CR>
 nmap <silent> <leader>tc :tabclose<cr>
 
 " Предыдущая вкладка
-map <c-s-left> :tabp<cr>
-nmap <c-s-left> :tabp<cr>
-imap <c-s-left> <esc>:tabp<cr>i
+map  <C-S-left> :tabp<cr>
+nmap <C-S-left> :tabp<cr>
+imap <C-S-left> <esc>:tabp<cr>i
 
 " Следующая вкладка
-map <c-s-right> :tabn<cr>
-nmap <c-s-right> :tabn<cr>
-imap <c-s-right> <esc>:tabn<cr>i
+map  <C-S-right> :tabn<cr>
+nmap <C-S-right> :tabn<cr>
+imap <C-S-right> <esc>:tabn<cr>i
 
 " }}}
 " Переключение табов (вкладок) с помощью SHIFT+TAB и CTRL+TAB
-map <S-TAB> :tabprevious<CR>
+map  <S-TAB> :tabprevious<CR>
 nmap <S-TAB> :tabprevious<CR>
 imap <S-TAB> <Esc>:tabprevious<CR>i
-map <C-TAB> :tabnext<CR>
+map  <C-TAB> :tabnext<CR>
 nmap <C-TAB> :tabnext<CR>
 imap <C-TAB> <Esc>:tabnext<CR>i
 
@@ -355,22 +354,22 @@ imap <C-TAB> <Esc>:tabnext<CR>i
 
 " Перемещение между окнами по Ctrl+Стрелки
 if has('gui_macvim')
-	map <a-down> <c-w><down>
+	map  <a-down> <c-w><down>
 	imap <a-down> <esc><c-w><c-down>
-	map <a-up> <c-w><up>
+	map  <a-up> <c-w><up>
 	imap <a-up> <esc><c-w><c-up>
-	map <a-left> <c-w><left>
+	map  <a-left> <c-w><left>
 	imap <a-left> <esc><c-w><c-left>
-	map <a-right> <c-w><right>
+	map  <a-right> <c-w><right>
 	imap <a-right> <esc><c-w><c-right>
 else
-	map <c-down> <c-w><down>
+	map  <c-down> <c-w><down>
 	imap <c-down> <esc><c-w><c-down>
-	map <c-up> <c-w><up>
+	map  <c-up> <c-w><up>
 	imap <c-up> <esc><c-w><c-up>
-	map <c-left> <c-w><left>
+	map  <c-left> <c-w><left>
 	imap <c-left> <esc><c-w><c-left>
-	map <c-right> <c-w><right>
+	map  <c-right> <c-w><right>
 	imap <c-right> <esc><c-w><c-right>
 endif
 
@@ -384,6 +383,9 @@ nnoremap tM :tabm -10<CR>
 nnoremap wm :vertical resize +80% <CR>
 " уменьшить окно
 nnoremap wM :vertical resize -80% <CR>
+
+" window zoom
+nnoremap wz <c-w>\|<c-w>_
 " ====================  TABS  ============================================
 
 " Автодополнение слова
