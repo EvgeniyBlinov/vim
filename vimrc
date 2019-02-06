@@ -31,7 +31,11 @@ set ffs=unix,dos,mac
 
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
 
-let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
+if exists("$AUTHOR_EMAIL") && !empty("$AUTHOR_EMAIL")
+    let snips_author = 'Evgeniy Blinov <'.$AUTHOR_EMAIL.'>'
+else
+    let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
+endif
 
 " Сочитание для Leader
 let mapleader = ","
