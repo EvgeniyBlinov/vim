@@ -33,3 +33,6 @@
 [submodule "pack/devops/start/vim-hcl"]
 	path = pack/devops/start/vim-hcl
 	url = https://github.com/b4b4r07/vim-hcl.git
+[submodule "pack/php/start/vim-phpfmt"]
+	path = pack/php/start/vim-phpfmt
+	url = https://github.com/beanworks/vim-phpfmt
