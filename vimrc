@@ -1,4 +1,5 @@
 " vim: set noet ci pi sts=0 sw=4 ts=4 :
+" https://github.com/rstacruz/cheatsheets/blob/master/vimscript.md
 "
 """"""""""  Multi config """""""""""""""""""""""""""
 "env VIMDIR=myvim vim
@@ -768,4 +769,3 @@ endif
 " ===========  supertab  =================
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
-
