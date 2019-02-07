@@ -204,10 +204,12 @@ set mouse+=a
     "" tmux knows the extended mouse mode
     "set ttymouse=xterm2
 "endif
-if has("mouse_sgr")
-    set ttymouse=sgr
-else
-    set ttymouse=xterm2
+if !has('nvim')
+	if has("mouse_sgr")
+		set ttymouse=sgr
+	else
+		set ttymouse=xterm2
+	end
 end
 set mousemodel=popup
 
@@ -237,7 +239,10 @@ set mousehide
 set smarttab
 set shiftround
 " set noexpandtab | retab! "конверт пробелов в табы
-set expandtab ts=4 sw=4 st=4 ai
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 " Автоотступы для новых строк
 set autoindent
 set nosmartindent
@@ -671,7 +676,7 @@ imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.')
      "endif
    endif
  endif
-:set clipboard=unnamed,exclude:cons\\\|linux
+":set clipboard=unnamed,exclude:cons\\\|linux
 
 " ex command for toggling hex mode - define mapping if desired
 command -bar Hexmode call ToggleHex()
