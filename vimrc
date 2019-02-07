@@ -641,9 +641,13 @@ vmap <C-c> :call system('xclip -selection c -i', @")
 imap <C-c> :call system('xclip -selection c -i', @")
 
 " Скопировать в буфер обмена текущее имя файла и номер строки
-map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
-vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
-imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
+map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
+vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
+imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
+" Старый формат
+"map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
+"vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
+"imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
 
 " Mapping xclip clipboard support
  if has("unix")
@@ -769,4 +773,4 @@ endif
 " ===========  supertab  =================
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
-runtime PROJECTS/**
+runtime! PROJECTS/**
