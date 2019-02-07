@@ -275,7 +275,7 @@ vmap <silent> <C-F> <Esc>a<C-^><Esc>:call MyKeyMapHighlight()<CR>gv
 " =================== HOTKEYS ================
 
 " Открытие конфига по ,v
-map <silent><leader>v :tabf ~/.vimrc<cr>
+map <silent><leader>v :tabf ~/.vim/vimrc<cr>
 
 " При отступах не снимать выделение
 vnoremap < <gv
