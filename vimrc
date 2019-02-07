@@ -636,14 +636,14 @@ vmap  <expr>  <S-DOWN>   DVB_Drag('down')
 vmap  <expr>  <S-UP>     DVB_Drag('up')
 " ==================   dragvisulas.vim ==========================
 
-map  <C-c> :call system('xclip -selection c -i', @")
-vmap <C-c> :call system('xclip -selection c -i', @")
-imap <C-c> :call system('xclip -selection c -i', @")
+map  <C-c> :call system('xclip -selection c -i', @")<CR>
+vmap <C-c> :call system('xclip -selection c -i', @")<CR>
+imap <C-c> :call system('xclip -selection c -i', @")<CR>
 
 " Скопировать в буфер обмена текущее имя файла и номер строки
-map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
-vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
-imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))
+map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))<CR>
+vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))<CR>
+imap <C-l> :call system('xclip -selection c -i', expand("%:p") . ':' . line('.'))<CR>
 " Старый формат
 "map  <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
 "vmap <C-l> :call system('xclip -selection c -i', expand("%:p") . ' +' . line('.'))
