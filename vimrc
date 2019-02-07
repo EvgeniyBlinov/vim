@@ -769,3 +769,4 @@ endif
 " ===========  supertab  =================
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
+runtime PROJECTS/**
