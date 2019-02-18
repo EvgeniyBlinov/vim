@@ -29,7 +29,14 @@ au BufRead,BufNewFile *.php vnoremap <buffer> <C-P> :call PhpDocRange()<CR>
 
 "" Включаем фолдинг для блоков классов/функций
 "" !!! ОЧЕНЬ СИЛЬНО ТОРМОЗИТ НА БОЛЬШИХ ФАЙЛАХ
-au FileType php  if s:fileLineCount() < 1000 | let php_folding = 1 | endif
+let foldlevel = 20
+let foldlevelstart = 20
+au FileType php  if s:fileLineCount() < 1000
+	\ |    let php_folding = 1
+	\ |    else
+	\ |    let php_folding = 0
+	\ |    set nofoldenable!
+	\ |    endif
 "" 	map <F5> <Esc>:EnableFastPHPFolds<Cr> 
 "" 	map <F6> <Esc>:EnablePHPFolds<Cr> 
 "" 	map <F7> <Esc>:DisablePHPFolds<Cr> 
