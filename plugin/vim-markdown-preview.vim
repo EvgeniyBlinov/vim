@@ -40,20 +40,20 @@ endif
 function! Vim_Markdown_Preview()
     write
     let b:curr_file = expand('%:p')
+    let g:vim_markdown_preview_file = './vim-markdown-preview.html'
 
     if g:vim_markdown_preview_github == 1
-        call system('grip "' . b:curr_file . '" --export /tmp/vim-markdown-preview.html --title vim-markdown-preview.html')
+        call system('grip "' . b:curr_file . '" --export ' . g:vim_markdown_preview_file . ' --title vim-markdown-preview.html')
     elseif g:vim_markdown_preview_perl == 1
         let g:vim_markdown_preview_w_title = 'vim-markdown'
-        let g:vim_markdown_preview_file = '/tmp/vim-markdown-preview.html'
         call system('echo "<!DOCTYPE html><html><head><meta charset=\"UTF-8\" /><title>' . g:vim_markdown_preview_w_title . '</title></head><body>" > ' . g:vim_markdown_preview_file . '.1')
         call system($VIMHOME . '/bin/Markdown.pl "' . b:curr_file . '" > ' . g:vim_markdown_preview_file . '.2')
         call system('echo "</body></html>" > ' . g:vim_markdown_preview_file . '.3')
         call system('cat ' . g:vim_markdown_preview_file . '.* > ' . g:vim_markdown_preview_file)
     elseif g:vim_markdown_preview_pandoc == 1
-        call system('pandoc --standalone "' . b:curr_file . '" > /tmp/vim-markdown-preview.html')
+        call system('pandoc --standalone "' . b:curr_file . '" > ' . g:vim_markdown_preview_file)
     else
-        call system('markdown "' . b:curr_file . '" > /tmp/vim-markdown-preview.html')
+        call system('markdown "' . b:curr_file . '" > ' . g:vim_markdown_preview_file)
     endif
     if v:shell_error
         echo 'Please install the necessary requirements: https://github.com/JamshedVesuna/vim-markdown-preview#requirements'
@@ -63,9 +63,9 @@ function! Vim_Markdown_Preview()
     let chrome_wid = system("xdotool search --name '" . g:vim_markdown_preview_w_title . " - " . g:vim_markdown_preview_browser . "'")
     if !chrome_wid
         if g:vim_markdown_preview_use_xdg_open == 1
-            call system('xdg-open /tmp/vim-markdown-preview.html 1>/dev/null 2>/dev/null &')
+            call system('xdg-open ' . g:vim_markdown_preview_file . ' 1>/dev/null 2>/dev/null &')
         else
-            call system('see /tmp/vim-markdown-preview.html 1>/dev/null 2>/dev/null &')
+            call system('see ' . g:vim_markdown_preview_file . ' 1>/dev/null 2>/dev/null &')
         endif
     else
         call system('xdotool windowmap ' . chrome_wid)
@@ -76,8 +76,8 @@ function! Vim_Markdown_Preview()
 
     if g:vim_markdown_preview_temp_file == 1
         sleep 200m
-        call system('rm /tmp/vim-markdown-preview.html.*')
-        call system('rm /tmp/vim-markdown-preview.html')
+        call system('rm ./vim-markdown-preview.html.*')
+        call system('rm ./vim-markdown-preview.html')
     endif
 endfunction
 
