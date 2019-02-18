@@ -36,3 +36,6 @@
 [submodule "pack/php/start/vim-phpfmt"]
 	path = pack/php/start/vim-phpfmt
 	url = https://github.com/beanworks/vim-phpfmt
+[submodule "pack/common/opt/vim-fugitive"]
+	path = pack/common/opt/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
