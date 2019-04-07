@@ -39,7 +39,7 @@ hi! link VertSplit StatusLineNC
 hi WildMenu gui=UNDERLINE guifg=#56A0EE guibg=#E9E9F4
 
 " Diff {{{1
-hi DiffText   gui=NONE guifg=#f83010 guibg=#ffeae0
+hi DiffText   gui=NONE guifg=#f83010 guibg=#ffeae0 cterm=none ctermfg=none ctermbg=LightYellow
 hi DiffChange gui=NONE guifg=#006800 guibg=#d0ffd0
 hi DiffDelete gui=NONE guifg=#2020ff guibg=#c8f2ea
 hi! link DiffAdd DiffDelete
