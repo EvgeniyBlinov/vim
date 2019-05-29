@@ -39,26 +39,26 @@
 		""runtime! config/common/base.vim
 		"set runtimepath=
 "function! s:LargeFile()
-	""let g:LargeFile = 1024 * 1024 * 1
-	""if getfsize(expand("%")) > g:LargeFile
-		"set eventignore+=FileType
-		"setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1
-		"set ft= syn=
-		"syntax off
-		"set nowrap
-		""set runtimepath=
-		""runtime! config/common/base.vim
-		"set runtimepath=
-	""else
-		""set eventignore-=FileType
-		""runtime! config/common/**
-		""runtime! PROJECTS/**
-	""endif
+"    let g:LargeFile = 1024 * 1024 * 1
+"    if getfsize(expand("%")) > g:LargeFile
+"        set eventignore+=FileType
+"        setlocal noswapfile bufhidden=unload buftype=nowrite undolevels=-1
+"        set ft= syn=
+"        syntax off
+"        set nowrap
+"        runtime! config/common/base.vim
+"        set runtimepath=
+"    else
+"        "set eventignore-=FileType
+"        runtime! config/common/**
+"        runtime! PROJECTS/**
+"    endif
 "endfunction
 
 "augroup LargeFile
-	"au!
-	"autocmd BufReadPre * :call s:LargeFile()<CR>
+    "au!
+    "autocmd BufReadPre * call s:LargeFile()<CR>
+"augroup END
 	"if getfsize(expand("%")) > g:LargeFile
 	"autocmd BufReadPre * let g:LargeFile = 1024 * 1024 * 1
 		"\| au VimEnter * syntax off
@@ -70,8 +70,41 @@
 		"\| set runtimepath=
 		"set runtimepath=
 		"runtime! config/common/base.vim
-"augroup END
 "########################################################################
 
 runtime! config/common/**
 runtime! PROJECTS/**
+
+"function LargeFile()
+    "let f=getfsize(expand("<afile>"))
+    "" file is large from 10mb
+    "let g:LargeFile = 1024 * 1024 * 10
+    "if f > g:LargeFile || f == -2
+        "if !has('g:configs_loaded')
+            "let g:configs_loaded = 1
+            "" no syntax highlighting etc
+            "set eventignore+=FileType
+            "" save memory when other file is viewed
+            "setlocal bufhidden=unload
+            "" is read-only (write with :w new_filename)
+            "setlocal buftype=nowrite
+            "" no undo possible
+            "setlocal undolevels=-1
+            "" display message
+            "autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
+            "runtime! config/common/base.vim
+            "set runtimepath=
+        "endif
+    "else
+        "if !has('g:configs_loaded')
+            "let g:configs_loaded = 1
+            "runtime! config/common/**
+            "runtime! PROJECTS/**
+        "endif
+    "endif
+"endfunction
+
+"call LargeFile()
+"augroup LargeFile
+ "autocmd BufReadPre * call LargeFile()
+"augroup END
