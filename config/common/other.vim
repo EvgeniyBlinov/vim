@@ -305,11 +305,11 @@ nnoremap tm :tabm +10<CR>
 nnoremap tM :tabm -10<CR>
 
 " увеличить окно
-nnoremap wm :vertical resize +80% <CR>
+nnoremap wm :vertical resize +80% <CR>:resize +80% <CR>
 " уменьшить окно
-nnoremap wM :vertical resize -80% <CR>
+nnoremap wM :vertical resize -80% <CR>:resize -80% <CR>
 
-" window zoom
+" window zoom | restore c-w-=
 nnoremap wz <c-w>\|<c-w>_
 " ====================  TABS  ============================================
 
