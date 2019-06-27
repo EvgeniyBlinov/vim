@@ -39,3 +39,6 @@
 [submodule "pack/common/opt/vim-fugitive"]
 	path = pack/common/opt/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/common/start/editorconfig-vim"]
+	path = pack/common/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
