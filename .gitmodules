@@ -45,3 +45,6 @@
 [submodule "pack/common/start/vim-table-mode"]
 	path = pack/common/start/vim-table-mode
 	url = https://github.com/dhruvasagar/vim-table-mode
+[submodule "pack/java/start/vim-javacomplete2"]
+	path = pack/java/start/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2
