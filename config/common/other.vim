@@ -180,6 +180,11 @@ imap <silent> <C-F> <C-^>X<Esc>:call MyKeyMapHighlight()<CR>a<C-H>
 nmap <silent> <C-F> a<C-^><Esc>:call MyKeyMapHighlight()<CR>
 vmap <silent> <C-F> <Esc>a<C-^><Esc>:call MyKeyMapHighlight()<CR>gv
 
+function! SetSpecialChars()
+    set list
+    set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+endfunction
+
 
 " C-e - комментировать/раскомментировать (при помощи NERD_Comment)
 "map <C-e> ,ci
@@ -427,6 +432,8 @@ map <C-\> :vsp <CR>:exec("tjump ".expand("<cword>"))<CR>
 " PHP настройки
 "-------------------------
 runtime! config/php/**
+runtime! config/java/**
+runtime! config/go/**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "============CSS block================
 " Сортировка css свойств
