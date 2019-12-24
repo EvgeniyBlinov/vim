@@ -47,7 +47,7 @@
 	url = https://github.com/dhruvasagar/vim-table-mode
 [submodule "/home/evgeniy/.vim/pack/go/start/vim-go"]
 	path = /home/evgeniy/.vim/pack/go/start/vim-go
-	url = https://github.com/fatih/vim-go.git
+	url = https://github.com/fatih/vim-go
 [submodule "pack/java/start/vim-javacomplete2"]
 	path = pack/java/start/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2
