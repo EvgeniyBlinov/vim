@@ -26,3 +26,6 @@ vmap <C-\> :vsp <CR>:GoDef<CR>
 imap <leader>f :GoFmt<cr>
 map  <leader>f :GoFmt<cr>
 vmap <leader>f :GoFmt<cr>
+
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
