@@ -51,3 +51,6 @@
 [submodule "pack/java/start/vim-javacomplete2"]
 	path = pack/java/start/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2
+[submodule "pack/common/start/ctrlp.vim"]
+	path = pack/common/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
