@@ -54,3 +54,6 @@
 [submodule "pack/common/start/ctrlp.vim"]
 	path = pack/common/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/common/start/coc.nvim"]
+	path = pack/common/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
