@@ -75,6 +75,29 @@
 runtime! config/common/**
 runtime! PROJECTS/**
 
+"###########################  GOLANG  ###################################
+"let l:lanaguage = 'undefined'
+
+""function SetGoOptions()
+    ""set foldmethod=indent
+    """"set foldlevel=1
+    """"set foldclose=all
+    ""map! <C-\> :vsp <CR>:exec("GoDef")<CR>
+    """runtime! config/go/**
+""endfunction
+
+"au FileType *.go call let l:lanaguage = "go"
+"au BufNewFile,BufRead *.go call let l:lanaguage = "go"
+
+":if l:lanaguage == 'go'
+":    echo &filetype
+":    runtime! config/go/**
+":endif
+if &filetype ==# 'go'
+    runtime! config/go/**
+endif
+"###########################  GOLANG  ###################################
+
 "function LargeFile()
     "let f=getfsize(expand("<afile>"))
     "" file is large from 10mb

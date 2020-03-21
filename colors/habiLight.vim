@@ -19,7 +19,7 @@ endif
 let g:colors_name = "habiLight"
 
 " Normal {{{1
-hi Normal ctermfg=black ctermbg=NONE guifg=black guibg=#F9F5F9
+hi Normal ctermfg=black ctermbg=white guifg=black guibg=#F9F5F9
 
 " Search {{{1
 hi IncSearch cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=UNDERLINE guifg=Black guibg=#FFE568
@@ -59,45 +59,109 @@ hi Directory    gui=NONE guifg=#0000ff guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 guibg=NONE
 hi NonText      gui=BOLD guifg=#4000ff guibg=#EFEFF7
 "hi SpecialKey   gui=NONE guifg=#A35B00 guibg=NONE
-hi Title        gui=BOLD guifg=#1014AD guibg=NONE
+hi Title         gui=BOLD guifg=#1014AD guibg=NONE
 hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=Black guibg=#BDDFFF
 hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=Black guibg=#BDDFFF
 
 " Syntax group {{{1
-hi Comment term=BOLD ctermfg=gray guifg=darkcyan
-hi Function term=UNDERLINE ctermfg=black guifg=black
-hi Constant term=UNDERLINE ctermfg=darkgreen guifg=#B91F49
-hi Error term=REVERSE ctermfg=15 ctermbg=9 guibg=Red guifg=White
-hi Identifier term=UNDERLINE ctermfg=darkred guifg=black
-hi Number   term=UNDERLINE ctermfg=darkgreen gui=NONE guifg=#00C226
-hi PreProc term=UNDERLINE ctermfg=darkblue guifg=#1071CE
-hi Special term=BOLD ctermfg=darkred guifg=red2
-hi Statement term=BOLD ctermfg=darkblue gui=NONE guifg=#F06F00
-hi Tag term=BOLD ctermfg=DarkGreen guifg=DarkGreen
-hi Todo term=STANDOUT ctermbg=Yellow ctermfg=blue guifg=Blue guibg=Yellow
-hi Type term=UNDERLINE ctermfg=blue gui=NONE guifg=Blue
-hi! link String	Constant
-hi! link Character	Constant
-hi! link Boolean	Constant
-hi! link Float		Number
-hi! link Function	Function
-hi! link Conditional	Statement
-hi! link Repeat	Statement
-hi! link Label		Statement
-hi! link Operator	Function
-hi! link Keyword	Statement
-hi! link Exception	Statement
-hi! link Include	PreProc
-hi! link Define	PreProc
-hi! link Macro		PreProc
-hi! link PreCondit	PreProc
-hi! link StorageClass	Type
-hi! link Structure	Function
-hi! link Typedef	Type
-hi! link SpecialChar	Function
-hi! link Delimiter	Function
-hi! link SpecialComment Special
-hi! link Debug		Special
+hi   Comment      term=BOLD        ctermfg=gray        cterm=italic        guifg=darkcyan
+
+hi   String       term=UNDERLINE   ctermfg=darkgreen   guifg=#B91F49
+hi   Constant     term=UNDERLINE   ctermfg=darkblue    guifg=#B91F49
+hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold        guifg=black
+
+"hi   Error        term=REVERSE     ctermfg=red         ctermbg=9         guibg=Red           guifg=White
+hi   Error        term=REVERSE     ctermfg=red         ctermbg=white         guibg=Red           guifg=White
+hi   Identifier   term=UNDERLINE   ctermfg=darkred     guifg=black
+hi   Special      term=BOLD        ctermfg=darkred     guifg=red2
+"hi   PreProc      term=UNDERLINE   ctermfg=darkblue    guifg=#1071CE
+hi   Tag          term=BOLD        ctermfg=DarkGreen   guifg=DarkGreen
+hi   Todo         term=STANDOUT    ctermbg=Yellow      ctermfg=blue      guifg=Blue          guibg=Yellow
+hi   Type         term=UNDERLINE   ctermfg=blue        gui=NONE          guifg=Blue
+hi   Statement    term=BOLD         ctermfg=darkblue   cterm=bold        gui=NONE          guifg=#F06F00
+hi   Operator    term=BOLD         ctermfg=darkblue    gui=NONE          guifg=#F06F00
+
+hi!   link   String           	 String
+hi!   link   Number           	 String
+hi!   link   Character        	 Constant
+hi!   link   Boolean          	 Constant
+hi!   link   Float            	 Number
+
+hi!   link   Function         	 Function
+
+hi!   link   Conditional      	 Statement
+hi!   link   Repeat           	 Statement
+hi!   link   Label            	 Statement
+"hi!   link   Operator         	 Statement
+hi!   link   Keyword          	 Statement
+hi!   link   Exception        	 Statement
+
+hi!   link   Structure        	 Statement
+hi!   link   PreProc          	 Statement
+hi!   link   Include          	 Statement
+hi!   link   Define           	 Statement
+hi!   link   Macro            	 Statement
+hi!   link   PreCondit        	 Statement
+hi!   link   StorageClass     	 Type
+hi!   link   Typedef          	 Type
+
+hi!   link   SpecialChar      	 Function
+hi!   link   Delimiter        	 Function
+hi!   link   SpecialComment      Special
+hi!   link   Debug            	 Special
+
+
+
+"" EXAMPLE
+"hi! link Comment DraculaComment
+"hi! link Underlined DraculaFgUnderline
+"hi! link Todo DraculaTodo
+
+"hi! link Error DraculaError
+"hi! link SpellBad DraculaErrorLine
+"hi! link SpellLocal DraculaWarnLine
+"hi! link SpellCap DraculaInfoLine
+"hi! link SpellRare DraculaInfoLine
+
+"hi! link Constant DraculaPurple
+"hi! link String DraculaYellow
+"hi! link Character DraculaPink
+"hi! link Number Constant
+"hi! link Boolean Constant
+"hi! link Float Constant
+
+"hi! link Identifier DraculaFg
+"hi! link Function DraculaGreen
+
+"hi! link Statement DraculaPink
+"hi! link Conditional DraculaPink
+"hi! link Repeat DraculaPink
+"hi! link Label DraculaPink
+"hi! link Operator DraculaPink
+"hi! link Keyword DraculaPink
+"hi! link Exception DraculaPink
+
+"hi! link PreProc DraculaPink
+"hi! link Include DraculaPink
+"hi! link Define DraculaPink
+"hi! link Macro DraculaPink
+"hi! link PreCondit DraculaPink
+"hi! link StorageClass DraculaPink
+"hi! link Structure DraculaPink
+"hi! link Typedef DraculaPink
+
+"hi! link Type DraculaCyanItalic
+
+"hi! link Delimiter DraculaFg
+
+"hi! link Special DraculaPink
+"hi! link SpecialComment DraculaCyanItalic
+"hi! link Tag DraculaCyan
+"hi! link helpHyperTextJump DraculaLink
+"hi! link helpCommand DraculaPurple
+"hi! link helpExample DraculaGreen
+"hi! link helpBacktick Special
+
 
 " HTML {{{1
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff guibg=NONE
@@ -116,7 +180,7 @@ highlight TabLineSel  term=bold cterm=bold gui=bold
 
 " Spell Checker {{{1
 if v:version >= 700
-    highlight SpellBad    term=reverse   ctermbg=12 gui=undercurl guisp=Red
+    highlight SpellBad    term=reverse   ctermbg=red cterm=bold gui=undercurl guisp=Red
     highlight SpellCap    term=reverse   ctermbg=9  gui=undercurl guisp=Blue
     highlight SpellRare   term=reverse   ctermbg=13 gui=undercurl guisp=Magenta
     highlight SpellLocale term=underline ctermbg=11 gui=undercurl guisp=DarkCyan

@@ -48,3 +48,12 @@
 [submodule "pack/go/start/vim-go"]
 	path = pack/go/start/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "pack/java/start/vim-javacomplete2"]
+	path = pack/java/start/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2
+[submodule "pack/common/start/ctrlp.vim"]
+	path = pack/common/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/common/start/coc.nvim"]
+	path = pack/common/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim

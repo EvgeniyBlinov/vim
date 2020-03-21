@@ -180,6 +180,11 @@ imap <silent> <C-F> <C-^>X<Esc>:call MyKeyMapHighlight()<CR>a<C-H>
 nmap <silent> <C-F> a<C-^><Esc>:call MyKeyMapHighlight()<CR>
 vmap <silent> <C-F> <Esc>a<C-^><Esc>:call MyKeyMapHighlight()<CR>gv
 
+function! SetSpecialChars()
+    set list
+    set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+endfunction
+
 
 " C-e - комментировать/раскомментировать (при помощи NERD_Comment)
 "map <C-e> ,ci
@@ -311,6 +316,70 @@ nnoremap wM :vertical resize -80% <CR>:resize -80% <CR>
 
 " window zoom | restore c-w-=
 nnoremap wz <c-w>\|<c-w>_
+
+" Plugins {{{
+	" bufkill
+	nnoremap zx :Bdelete<CR>
+
+	" CtrlP
+	let g:ctrlp_map = ''
+	" Only open CtrlP if the cwd ISN'T $HOME
+	nnoremap <silent><expr> <leader>/ getcwd() != $HOME ? ":<C-u>CtrlP<CR>" : ":<C-u>echoe 'Cannot open CtrlP in HOME'<CR>"
+	nnoremap <silent> <leader>. :CtrlPCurFile<CR>
+	nnoremap <silent> <leader>, :CtrlPBuffer<CR>
+	nnoremap <silent> <leader>; :CtrlPFunky<CR>
+	nnoremap <silent> <leader>m :CtrlPMRU<CR>
+	nnoremap <silent> <leader>M :CtrlPModified<CR>
+	nnoremap <silent> <leader>] :CtrlPBufTag<CR>
+	nnoremap <silent> <leader>} :CtrlPBufTagAll<CR>
+
+	" NERDTree
+	"map <localleader>\ :NERDTree <C-r>=FindRootDirectory()<CR><CR>
+	"map <localleader>. :NERDTreeFind<CR>
+
+	" Tabularize
+	nmap <leader>= :Tabularize /
+	vmap <leader>= :Tabularize /
+
+	" Neosnippet
+	" SuperTab like snippets behavior.
+	"imap <expr><TAB>
+		"\ pumvisible() ? "\<C-n>" :
+		"\ neosnippet#expandable_or_jumpable() ?
+		"\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+	"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+		"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+	" Emmet
+	"imap <expr> <C-CR> emmet#expandAbbrIntelligent("\<tab>")
+
+	"" Sneak
+	""replace 'f' with 1-char Sneak
+	"nmap f <Plug>Sneak_f
+	"nmap F <Plug>Sneak_F
+	"xmap f <Plug>Sneak_f
+	"xmap F <Plug>Sneak_F
+	"omap f <Plug>Sneak_f
+	"omap F <Plug>Sneak_F
+	""replace 't' with 1-char Sneak
+	"nmap t <Plug>Sneak_t
+	"nmap T <Plug>Sneak_T
+	"xmap t <Plug>Sneak_t
+	"xmap T <Plug>Sneak_T
+	"omap t <Plug>Sneak_t
+	"omap T <Plug>Sneak_T
+
+	"" YCM
+	"map g] :YcmCompleter GoToDefinitionElseDeclaration<CR>
+	"let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+	"let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+
+	" vim-maximizer
+	"nnoremap <silent> <C-w>o :<C-u>MaximizerToggle!<CR>
+
+	" vim-switch
+	"nnoremap ! :Switch<CR>
+" }}}
 " ====================  TABS  ============================================
 
 " Автодополнение слова
@@ -427,6 +496,7 @@ map <C-\> :vsp <CR>:exec("tjump ".expand("<cword>"))<CR>
 " PHP настройки
 "-------------------------
 runtime! config/php/**
+runtime! config/java/**
 runtime! config/go/**
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "============CSS block================
