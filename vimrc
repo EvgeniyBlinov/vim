@@ -93,9 +93,10 @@ runtime! PROJECTS/**
 ":    echo &filetype
 ":    runtime! config/go/**
 ":endif
-if &filetype ==# 'go'
-    runtime! config/go/**
-endif
+"if &filetype ==# 'go'
+"if &filetype == 'go'
+    "runtime! custom_config/go/**
+"endif
 "###########################  GOLANG  ###################################
 
 "function LargeFile()
