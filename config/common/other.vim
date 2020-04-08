@@ -195,7 +195,7 @@ endfunction
 " =================== HOTKEYS ================
 
 " Открытие конфига по ,v
-map <silent><leader>v :tabf ~/.vim/vimrc<cr>
+map <silent><leader>v :tabf $HOME/$VIMDIR/vimrc<cr>
 
 " При отступах не снимать выделение
 vnoremap < <gv

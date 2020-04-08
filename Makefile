@@ -11,7 +11,13 @@ PACK_ENV ?= common
 PACK_ACTION ?= start
 PACK_PATH ?= pack/$(PACK_ENV)/$(PACK_ACTION)
 
-all: plugins
+all: \
+		plugins \
+		plugins-install
+
+.PHONY: plugins-install
+plugins-install: \
+		coc-install
 
 .PHONY: upgrade
 upgrade: plugin-upgrade-all
@@ -40,3 +46,9 @@ plugin-add: \
 .PHONY: plugin-upgrade-all
 plugin-upgrade-all:
 	git submodule update --init --remote --merge
+
+.PHONY: coc-install
+coc-install:
+	test -d pack/common/start/coc.nvim && \
+	cd pack/common/start/coc.nvim && \
+	./install.sh nightly
