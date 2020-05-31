@@ -675,3 +675,5 @@ endif
 " ===========  supertab  =================
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
+" ===========  coc  ======================
+let g:coc_disable_startup_warning = 1
