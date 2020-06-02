@@ -80,11 +80,6 @@ let g:ctrlp_buftag_types = {'go' : '--language-force=go --golang-types=ftv'}
 " format with goimports instead of gofmt
 let g:go_fmt_command = "goimports"
 
-map <C-i> :GoInfo<CR>
-imap <C-i> :GoInfo<CR>
-nmap <C-i> :GoInfo<CR>
-vmap <C-i> :GoInfo<CR>
-
 map <C-\> :vsp <CR>:GoDef<CR>
 imap <C-\> :vsp <CR>:GoDef<CR>
 nmap <C-\> :vsp <CR>:GoDef<CR>
