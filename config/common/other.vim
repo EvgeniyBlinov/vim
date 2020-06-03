@@ -661,7 +661,7 @@ nnoremap gb :ls<CR>:b<Space>
 "" Перейти в файл под курсором
 nnoremap <F8> :vertical wincmd F<CR>
 nnoremap <C-x> :vertical wincmd F<CR>
-nnoremap <F9> :vnew
+nnoremap <F9> <C-w>v:<C-U>call gf#user#do("gF", "n")<CR>
 
 
 "set noautochdir
