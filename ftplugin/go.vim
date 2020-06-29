@@ -37,15 +37,14 @@ let g:go_def_mode='gopls'
 " let g:go_gocode_propose_source=0
 " autocmd BufWritePost *.go silent! :GoBuild -i
 
-" let g:go_metalinter_autosave = 1
-" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-" let g:go_metalinter_autosave_enabled = ['vet']
 "
 "
 " autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 augroup filetype_go
     autocmd!
@@ -89,5 +88,35 @@ imap <leader>f :GoFmt<cr>
 map  <leader>f :GoFmt<cr>
 vmap <leader>f :GoFmt<cr>
 
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
+
+"########################################################################
+
+nnoremap <F6> :w <CR> :GoTestCompile <CR> <CR>
+inoremap <F6> <ESC> :w <CR> :GoTestCompile <CR> <CR>
+
+"let g:go_metalinter_autosave=1
+"let g:go_metalinter_autosave_enabled=['golint', 'govet']
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+"let g:go_metalinter_autosave_enabled = ['vet']
+
+let g:go_metalinter_autosave=0
+let g:go_metalinter_autosave_enabled=['golint', 'govet', 'typecheck']
+
+let g:go_list_type = 'locationlist'
+
+"let g:go_metalinter_autosave=1
+"let g:go_metalinter_autosave_enabled=['golint', 'govet', 'typecheck']
+"let g:go_metalinter_command='golangci-lint'
+
+" turn to next or previous errors, after open location list
+nmap <leader>j :lnext<CR>
+nmap <leader>k :lprevious<CR>
+
+"########################################################################
+"let g:go_debug=['shell-commands']
+"let g:go_debug_windows = {
+      "\ 'vars':       'rightbelow 60vnew',
+      "\ 'stack':      'rightbelow 10new',
+"\ }
+
