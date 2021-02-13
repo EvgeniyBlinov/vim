@@ -66,3 +66,6 @@
 [submodule "pack/devops/start/vim-toml"]
 	path = pack/devops/start/vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "pack/js/start/vim-vue-plugin"]
+	path = pack/js/start/vim-vue-plugin
+	url = https://github.com/leafoftree/vim-vue-plugin
