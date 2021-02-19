@@ -66,3 +66,6 @@
 [submodule "pack/devops/start/vim-toml"]
 	path = pack/devops/start/vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "pack/common/start/vim-dirdiff"]
+	path = pack/common/start/vim-dirdiff
+	url = https://github.com/will133/vim-dirdiff

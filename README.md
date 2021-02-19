@@ -54,3 +54,12 @@ Delete the now untracked submodule files rm -rf path_to_submodule
 ```sh
 env PACK_ENV=common PACK_ACTION=opt make plugin-add ARGS=https://github.com/dracula/dracula-theme
 ```
+
+#### @TODO
+
+```sh
+coc.vim
+    - node >= 12.0.0
+    - npm install
+
+```
