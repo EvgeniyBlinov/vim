@@ -69,3 +69,6 @@
 [submodule "pack/common/start/vim-dirdiff"]
 	path = pack/common/start/vim-dirdiff
 	url = https://github.com/will133/vim-dirdiff
+[submodule "pack/js/start/vim-vue-plugin"]
+	path = pack/js/start/vim-vue-plugin
+	url = https://github.com/leafoftree/vim-vue-plugin
