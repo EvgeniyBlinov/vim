@@ -47,9 +47,6 @@ augroup filetype
 	autocmd BufRead,BufNewFile *.vue set filetype=html
 augroup END
 
-set ignorecase				" Игнорирование регистра при поиске
-set incsearch               " Перескакивать на найденные слова
-
 
 " Установка английских диалогов
 if has('unix')

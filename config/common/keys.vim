@@ -191,12 +191,12 @@ nnoremap wz <c-w>\|<c-w>_
 " ====================  TABS  ============================================
 
 " Автодополнение слова
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-\ "\<lt>C-n>" :
-\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
+"inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+"\ "\<lt>C-n>" :
+"\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+"\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+"\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+"imap <C-@> <C-Space>
 
 
 " Автоматизация {{{
@@ -483,8 +483,6 @@ endif
 " ===========  supertab  =================
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
-" ===========  coc  ======================
-let g:coc_disable_startup_warning = 0
 " ===========  hints  ====================
 "" show local current function
 ":verbose setlocal omnifunc?

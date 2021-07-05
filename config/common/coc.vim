@@ -47,6 +47,8 @@ endfunction
   "inoremap <silent><expr> <c-space> coc#refresh()
 "else
   inoremap <silent><expr> <c-tab> coc#refresh()
+  inoremap <silent><expr> <leader><tab> coc#refresh()
+  inoremap <silent><expr> <c-i> coc#refresh()
 "endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to

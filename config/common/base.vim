@@ -76,10 +76,14 @@ else
   set signcolumn=yes
 endif
 
+set ignorecase				" Игнорирование регистра при поиске
+set incsearch               " Перескакивать на найденные слова
+
 """"""""""""""""""""""""""""   from coc.vim  """""""""""""""""""""""""""""""""
 
 set nowrap				" Отключение переноса длинных строк
 set infercase           " предлагать авто-дополнение на основе уже введённого регистра
+""""""""""""""""""""""""""""   from coc.vim  """""""""""""""""""""""""""""""""
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")

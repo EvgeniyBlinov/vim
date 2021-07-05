@@ -139,3 +139,6 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+" ===========  coc  ======================
+let g:coc_disable_startup_warning = 1
+
