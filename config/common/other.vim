@@ -676,7 +676,7 @@ endif
 "let g:SuperTabNoCompleteAfter = ['^', '\s']
 "let g:SuperTabCrMapping = 0
 " ===========  coc  ======================
-let g:coc_disable_startup_warning = 1
+let g:coc_disable_startup_warning = 0
 " ===========  hints  ====================
 "" show local current function
 ":verbose setlocal omnifunc?

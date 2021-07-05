@@ -43,6 +43,7 @@ set ttyfast " ускорение открытия файлов
 
 "set backup 					" keep a backup file
 set nobackup			" Запретить создание бэкапов
+set nowritebackup
 set noswapfile			" Запретить создание swap файлов
 
 set ruler						" Всегда показывать положение курсора
@@ -51,6 +52,31 @@ set nu
 set list				" Отображение спецсимволов
 	"set listchars=tab:→→,trail:·,nbsp:~
 	set listchars=tab:│┈,trail:·,nbsp:~
+
+""""""""""""""""""""""""""""   from coc.vim  """""""""""""""""""""""""""""""""
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+"set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+""""""""""""""""""""""""""""   from coc.vim  """""""""""""""""""""""""""""""""
 
 set nowrap				" Отключение переноса длинных строк
 set infercase           " предлагать авто-дополнение на основе уже введённого регистра
