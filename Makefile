@@ -12,8 +12,7 @@ PACK_ACTION ?= start
 PACK_PATH ?= pack/$(PACK_ENV)/$(PACK_ACTION)
 
 all: \
-		plugins \
-		plugins-install
+		plugins
 
 .PHONY: plugins-install
 plugins-install: \
