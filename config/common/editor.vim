@@ -1,9 +1,6 @@
 " vim: set noet ci pi sts=0 sw=4 ts=4 :
 """"""""""""""""""""""""""""""""    FILE   """"""""""""""""""""""""""""""""""""
 
-
-" set background=dark		" Использование цветов для темного фона
-"set background=light
 set foldenable 			" Фолдинг сворачивание кода
 set foldmethod=manual
 "set foldmethod=indent
@@ -15,19 +12,11 @@ au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
 
-" Term
-if &term =~ "xterm"
-	set t_Co=256			" set 256 colors
-" 	colorscheme vitamins
-	" Подсветка спец символов
-	autocmd VimEnter,Colorscheme * :hi SpecialKey ctermfg=8
-endif
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
+	syntax on
+	set hlsearch
 endif
 
 " Syntax highlighting enables.
@@ -86,7 +75,6 @@ set showcmd
 set statusline=%<%f%h%m%r%=format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&encoding}\ %b\ 0x%B\ %l,%c%V\ %P
 
 
-
 " tabs
 "set noet ci pi sts=0 sw=4 ts=4
 """"""""""" equal
@@ -115,4 +103,3 @@ set nosmartindent
 
 " Заставляем BackSpace работать как x, т.е. удалять предыдущий символ
 set backspace=indent,eol,start whichwrap+=<,>,[,]
-

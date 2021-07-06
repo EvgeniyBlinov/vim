@@ -19,13 +19,10 @@ set ffs=unix,dos,mac
 """"""""""""""""""""""""""""   ENCODING   """"""""""""""""""""""""""""""""""""
 
 if exists("$AUTHOR_EMAIL") && !empty("$AUTHOR_EMAIL")
-    let snips_author = 'Evgeniy Blinov <'.$AUTHOR_EMAIL.'>'
+	let snips_author = 'Evgeniy Blinov <'.$AUTHOR_EMAIL.'>'
 else
-    let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
+	let snips_author = 'Evgeniy Blinov <evgeniy_blinov@mail.ru>'
 endif
-
-" Сочитание для Leader
-let mapleader = ","
 
 set confirm " использовать диалоги вместо сообщений об ошибках
 set novb " Отключить оповещение об ошибка
@@ -50,8 +47,8 @@ set ruler						" Всегда показывать положение курсо
 set nu
 
 set list				" Отображение спецсимволов
-	"set listchars=tab:→→,trail:·,nbsp:~
-	set listchars=tab:│┈,trail:·,nbsp:~
+"set listchars=tab:→→,trail:·,nbsp:~
+set listchars=tab:│┈,trail:·,nbsp:~
 
 """"""""""""""""""""""""""""   from coc.vim  """""""""""""""""""""""""""""""""
 " TextEdit might fail if hidden is not set.
@@ -70,10 +67,10 @@ set updatetime=300
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
+	" Recently vim can merge signcolumn and number column into one
+	set signcolumn=number
 else
-  set signcolumn=yes
+	set signcolumn=yes
 endif
 
 set ignorecase				" Игнорирование регистра при поиске
@@ -87,16 +84,16 @@ set infercase           " предлагать авто-дополнение н�
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
-  augroup redhat
-	" In text files, always limit the width of text to 78 characters
-	" autocmd BufRead *.txt,*.php set tw=78
+	augroup redhat
+		" In text files, always limit the width of text to 78 characters
+		" autocmd BufRead *.txt,*.php set tw=78
 
-	" When editing a file, always jump to the last cursor position
-	autocmd BufReadPost *
-	\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-	\	exe "normal! g'\"" |
-	\ endif
-  augroup END
+		" When editing a file, always jump to the last cursor position
+		autocmd BufReadPost *
+		\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+		\	exe "normal! g'\"" |
+		\ endif
+	augroup END
 endif
 
 "Vim Modelines Shell Command Injection Vulnerability disable

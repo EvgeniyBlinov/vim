@@ -1,5 +1,8 @@
 " vim: set noet ci pi sts=0 sw=4 ts=4 :
 
+
+" Сочитание для Leader
+let mapleader = ","
 " =================== HOTKEYS ================
 
 " Открытие конфига по ,v
