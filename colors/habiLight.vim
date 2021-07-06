@@ -64,22 +64,26 @@ hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=Black guibg=#
 hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=Black guibg=#BDDFFF
 
 " Syntax group {{{1
-hi   Comment      term=BOLD        ctermfg=gray        cterm=italic        guifg=darkcyan
-
 hi   String       term=UNDERLINE   ctermfg=darkgreen   guifg=#B91F49
+hi   Comment      term=BOLD        ctermfg=gray        cterm=italic        guifg=darkcyan
 hi   Constant     term=UNDERLINE   ctermfg=darkblue    guifg=#B91F49
+
 hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold        guifg=black
 
 "hi   Error        term=REVERSE     ctermfg=red         ctermbg=9         guibg=Red           guifg=White
 hi   Error        term=REVERSE     ctermfg=red         ctermbg=white         guibg=Red           guifg=White
 hi   Identifier   term=UNDERLINE   ctermfg=darkred     guifg=black
 hi   Special      term=BOLD        ctermfg=darkred     guifg=red2
-"hi   PreProc      term=UNDERLINE   ctermfg=darkblue    guifg=#1071CE
+
+hi   PreProc      term=UNDERLINE   ctermfg=darkmagenta    guifg=#1071CE
+
 hi   Tag          term=BOLD        ctermfg=DarkGreen   guifg=DarkGreen
 hi   Todo         term=STANDOUT    ctermbg=Yellow      ctermfg=blue      guifg=Blue          guibg=Yellow
 hi   Type         term=UNDERLINE   ctermfg=blue        gui=NONE          guifg=Blue
+
 hi   Statement    term=BOLD         ctermfg=darkblue   cterm=bold        gui=NONE          guifg=#F06F00
-hi   Operator    term=BOLD         ctermfg=darkblue    gui=NONE          guifg=#F06F00
+
+hi   Operator    term=BOLD         ctermfg=black    gui=NONE          guifg=#F06F00
 
 hi!   link   String           	 String
 hi!   link   Number           	 String
@@ -97,11 +101,12 @@ hi!   link   Keyword          	 Statement
 hi!   link   Exception        	 Statement
 
 hi!   link   Structure        	 Statement
-hi!   link   PreProc          	 Statement
+
 hi!   link   Include          	 Statement
 hi!   link   Define           	 Statement
 hi!   link   Macro            	 Statement
 hi!   link   PreCondit        	 Statement
+
 hi!   link   StorageClass     	 Type
 hi!   link   Typedef          	 Type
 
