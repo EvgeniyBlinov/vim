@@ -4,6 +4,7 @@
 
 " Открытие конфига по ,v
 map <silent><leader>v :tabf $HOME/$VIMDIR/vimrc<cr>
+map <silent><leader>s :source $MYVIMRC<cr>
 
 " При отступах не снимать выделение
 vnoremap < <gv
@@ -63,7 +64,7 @@ nmap <silent> <leader>tn :tabnew<cr>
 nmap ,t :tabnew<CR>
 
 " Закрыть вкладку
-nmap <silent> <leader>tc :tabclose<cr>
+"nmap <silent> <leader>tc :tabclose<cr>
 
 " Предыдущая вкладка
 map  <C-S-left> :tabp<cr>
@@ -486,3 +487,8 @@ endif
 " ===========  hints  ====================
 "" show local current function
 ":verbose setlocal omnifunc?
+
+" ===========  theme  ====================
+noremap <silent> <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+                        \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+                        \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
